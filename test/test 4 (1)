@@ -1,0 +1,40 @@
+import java.util.Arrays;
+import java.util.Scanner;
+
+public class SortStringArray {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        String arr[] = {"Banana", "Apple", "Carrot", "Radish", "Jack"};
+        int len = arr.length;
+        
+        System.out.print("Enter the order (A for ascending, D for descending): ");
+        char order = scanner.next().charAt(0);
+
+        if (order == 'A') {
+            for (int i = 0; i < len; i++) {
+                for (int j = i + 1; j < arr.length; j++) {
+                    if (arr[i].compareTo(arr[j]) > 0) {
+                        String temp = arr[i];
+                        arr[i] = arr[j];
+                        arr[j] = temp;
+                    }
+                }
+            }
+            System.out.println(Arrays.toString(arr));
+        } else if (order == 'D') {
+            for (int i = 0; i < len; i++) {
+                for (int j = i + 1; j < arr.length; j++) {
+                    if (arr[i].compareTo(arr[j]) < 0) {
+                        String temp = arr[i];
+                        arr[i] = arr[j];
+                        arr[j] = temp;
+                    }
+                }
+            }
+            System.out.println(Arrays.toString(arr));
+        }
+
+        // Close the scanner to avoid resource leak
+        scanner.close();
+    }
+}

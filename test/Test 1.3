@@ -1,0 +1,27 @@
+import java.util.Scanner;
+public class test3{
+   public static void main(String[] args)
+{
+	int arr[]={4,54,29,71,7,59,98,23};
+	int len=arr.length;
+	int prime=0,comp=0;
+	for(int i=0;i<len;i++)
+	{
+		int c=0;
+		for(int j=1;j<arr[i];j++)
+		{
+			if(i%j==0)
+			{
+			  c++;
+			}
+		}
+		if(c>2)
+		 comp++;
+		else
+		 prime++;
+	}
+	System.out.print("the total number of prime numbers are: " + prime);
+        System.out.println("\n" + "the total number of composite numbers are: " + comp);
+
+}
+}

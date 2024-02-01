@@ -1,0 +1,59 @@
+1.factorial of n:
+    import java.util.Scanner;
+
+public class RectangleSymbolPattern {
+    public static void main(String[] args) {
+        Scanner input=new Scanner(System.in);
+}
+
+
+        int n=input.nextInt(); 
+        int fact=1; 
+        for(int i=1;i<=n;i++)
+        { 
+            fact=fact*i;
+        } 
+        System.out.print(fact); 
+        
+    }
+}
+
+2.pattern program:
+    public class NumberPattern {
+    public static void main(String[] args) {
+        int n = 4;
+        for (int i = 1; i <= n; i++) {
+            for (int j = 1; j <= i; j++) {
+                System.out.print(i);
+            }
+            System.out.println();
+        }
+        for (int i = n - 1; i >= 1; i--) {
+            for (int j = 1; j <= i; j++) {
+                System.out.print(i);
+            }
+            System.out.println();
+        }
+    }
+}
+
+
+3.LEAP YEAR OR NOT:
+    import java.util.Scanner;
+
+public class LeapYearChecker {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Enter a year: ");
+        int year = scanner.nextInt();
+        if (isLeapYear(year)) {
+            System.out.println(year + " is a leap year.");
+        } else {
+            System.out.println(year + " is not a leap year.");
+        }
+        scanner.close();
+    }
+    private static boolean isLeapYear(int year) {
+        return (year % 4 == 0 && year % 100 != 0) || (year % 400 == 0);
+    }
+}

@@ -1,0 +1,46 @@
+import java.util.Scanner;
+public class test2{
+public static void main(String[] args)
+{
+  Scanner inp = new Scanner(System.in);
+  System.out.print("enter mark 1: ");
+  int m1=inp.nextInt();
+  
+  System.out.print("enter mark 2: ");
+  int m2=inp.nextInt();
+  
+  
+  System.out.print("enter mark 3: ");
+  int m3=inp.nextInt();
+
+  System.out.print("enter mark 4: ");
+  int m4=inp.nextInt();
+
+ int total = m1+m2+m3+m4;
+ System.out.println("TOTAL: " + total);
+ float agg= total/4f;
+ System.out.println("AVERAGE: " + agg);
+ 	if(agg>=75)
+	{
+	  System.out.println("DISTINCTION");
+	}
+        else if(agg>=60 && agg<75)
+	{
+	   System.out.println("FIRST DIVISION");
+	}
+        else if(agg>=50 && agg<60)
+	{
+	  System.out.println("SECOND DIVISION");
+	}
+        else if(agg>=40 && agg<50)
+	{
+	   System.out.println("THIRD DIVISION");
+	}
+        else
+        {
+	   System.out.print("FAIL");
+	}
+
+
+  }
+}

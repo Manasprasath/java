@@ -1,0 +1,55 @@
+1.email valid or not:
+import java.util.Scanner;
+
+public class SimpleEmailValidator {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Enter an email address: ");
+        String email = scanner.nextLine();
+        if (isValidEmail(email)) {
+            System.out.println("Valid email address.");
+        } else {
+            System.out.println("Invalid email address.");
+        }
+        scanner.close();
+    }
+    private static boolean isValidEmail(String email) {
+        return email.contains("@");
+    }
+}
+
+2.palindrome or not:
+import java.util.Scanner;
+
+public class SimplePalindromeChecker {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Enter a string: ");
+        String input = scanner.nextLine();
+        if (isPalindrome(input)) {
+            System.out.println("Palindrome!");
+        } else {
+            System.out.println("Not a palindrome.");
+        }
+        scanner.close();
+    }
+    private static boolean isPalindrome(String str) {
+        return str.equals(new StringBuilder(str).reverse().toString());
+    }
+}
+
+3.write a program to convert the decimal number equivalent to binary number nd octal numbers:
+import java.util.Scanner;
+
+public class DecimalToBinaryOctalConverter {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Enter a decimal number: ");
+        int decimalNumber = scanner.nextInt();
+        String binaryEquivalent = Integer.toBinaryString(decimalNumber);
+        String octalEquivalent = Integer.toOctalString(decimalNumber);
+        System.out.println("Binary: " + binaryEquivalent);
+        System.out.println("Octal: " + octalEquivalent);
+        scanner.close();
+    }
+}
